@@ -1,0 +1,547 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales</title>
+    <style>
+        body{
+            background-color: rgb(87, 87, 255);
+            display: flex;
+            flex-direction: row;
+            gap:10px;     
+                                  
+            
+            
+        }
+
+        .item{
+            background-color: white;
+            min-height:60px;
+            width:auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 5px;
+            text-align: center;
+
+        }
+
+        .item img{
+           
+            width:35px;
+
+        }
+
+        .item p{
+            font-size: 12px;
+            margin:0;
+            
+        }
+
+         .item0{
+            background-color: white;
+            height:80px;
+            width:auto;
+            
+
+        }
+
+         .item1{
+            background-color: white;
+            height:40px;
+            width:auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 13px;
+            text-align: center;
+            margin: 0.5px;
+            
+
+        }
+
+        #product-price{
+            width:45%;
+            display: grid;
+            height:200px;
+            
+        }
+        #products{
+            width:65%;
+            display: grid;
+            gap:2px
+        }
+
+        #top-cost{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:2px;
+            
+
+        }
+
+        .item0{
+            height:60px;
+        }
+
+        .item-1{
+            background-color: rgb(201, 200, 200); 
+        }
+
+        .item-2 p{
+            margin:0;
+            font-size: 10px;
+            color: rgb(110, 110, 110);
+        }
+
+        .item-2 h2{
+            margin:10px;
+            text-align: center;
+            color: green;
+            font-size: 29px;
+        }
+
+        #qty-desc-price{
+            display:grid;
+            grid-template-columns: 1fr 7fr 2fr;
+            border-bottom: 0.5px solid grey;
+            margin-top: 5px;
+            padding-right: -2px;
+            
+            
+            
+        }
+
+        
+
+        .item3, .item4, .item5{
+            height:20px;
+            background-color: rgb(238, 231, 231);
+            color: rgb(4, 4, 112);
+            font-size: 10px;
+        }
+
+        
+
+        .item18{
+            height:435px;
+        }
+
+        #bottom-cost{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 2fr 1fr;
+            margin-top: 5px;
+            gap: 2px;
+        }
+
+        .item2{
+            width: auto;
+            height: auto;
+            background-color: white;
+        }
+
+        .item2 p{
+            font-size: 11px;
+            margin: 0;
+            color: grey;
+        }
+        .item2 h2{
+            text-align: center;
+            margin: 0;
+        }
+
+        .item21 h2{
+            color: green;
+        }
+
+        .item25{
+            text-align: center;
+            
+        }
+
+        #first-row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(133, 202, 230, 0.952);
+            margin-bottom: 40px;
+            height: 40px;
+        }
+
+        #first-row p, #first-row h3{
+            margin-top: 5px;
+            
+        }
+
+        #products{
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+
+
+        #products-list{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 5px;
+           align-content: center;
+           position: relative;
+            
+        }
+
+        .item39{
+            grid-column: 2/ span 2;
+            grid-row: 3/ 5;
+        }
+
+        .item51{
+            grid-column: 2/ 5;
+        }
+
+        .item66{
+            grid-row: 8/span 2 ;
+            grid-column: 5/6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+
+        .item67{
+            grid-row: 8/span 2 ;
+            grid-column: 6/7;
+             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: lightgreen;
+        }
+
+        .item77 p, .item76 p, .item75 p, .item73 p, .item72 p, .item71 p, .item65 p, .item64 p, .item63 p, 
+        .item59 p, .item58 p, .item57 p, .item51 p{
+            font-size: 40px;
+        }
+
+        .item50 p{
+            font-size: 40px;
+            color: red;
+            
+        }
+
+        
+
+        .item50{
+            background-color: rgb(255, 208, 215);
+        }
+
+        .item56 p{
+            font-size:25px;
+            padding: 10px;
+        }
+
+        .item39 img{
+            width:110px;
+            height: 120px;
+        }
+
+        .item29{
+            background-color: rgb(164, 255, 225);
+        }
+
+        .item37{
+            background-color: rgb(255, 208, 215);
+        }
+
+        .item32, .item38, .item54{
+            padding-top: 20px;
+        }
+
+        .item:hover{
+            background-color: rgb(209, 208, 208);
+            transition: 0.3s;
+        }
+
+
+        @media screen and (max-width:676px){
+            .item18{
+                height: 458px;
+            }
+        }
+        
+
+        @media screen and (min-width:1236px){
+            #qty-desc-price div{
+                font-size: 17px;
+            }
+        }
+
+        @media screen and (max-width:528px){
+            #first-row{
+                width:330px;
+            }
+
+            .item18{
+                height: 460px;
+            }
+        }
+
+           @media screen and (max-width:692px) and (min-width:640px){
+        
+
+            .item18{
+                height: 456px;
+            }
+        }
+       
+
+
+        
+    </style>
+</head>
+<body>
+    <section id="product-price">
+    <div id="top-cost">
+        <div class="item0 item-1"></div>
+        <div class="item0 item-2">
+            <p>TOTAL</p>
+            <h2>$87.46</h2>
+        </div>
+    </div>
+    <div id="qty-desc-price">
+        <div class="item1 item3">QTY</div>
+        <div class="item1 item4">DESCRIPTION</div>
+        <div class="item1 item5">PRICE</div>
+        <div class="item1 item6">1</div>
+        <div class="item1 item7">HEINEKEN 12OZ [728914]</div>
+        <div class="item1 item8">$8.49</div>
+        <div class="item1 item9">1</div>
+        <div class="item1 item10">JOHNNIE WALKER BLACK 750ML [088110011307]</div>
+        <div class="item1 item11">$32.99</div>
+        <div class="item1 item12">1</div>
+        <div class="item1 item13">AMERICAN WINE CHARDONNAY [732048005272]</div>
+        <div class="item1 item14">$12.99</div>
+        <div class="item1 item15">1</div>
+        <div class="item1 item16">JOHNNIE WALKER BLACK 750ML [088110011307]</div>
+        <div class="item1 item17">$32.99</div>
+        
+    </div>
+
+    <div id="empty">
+        <div class="item0 item18"></div>
+    </div>
+
+    <div id="bottom-cost">
+        <div class="item2 item20">
+            <p>SUBTOTAL</p>
+            <h2>$87.46</h2>
+        </div>
+        <div class="item2 item21">
+            <p>SAVINGS</p>
+            <h2>$0.00</h2>
+        </div>
+        <div class="item2 item22">
+            <p>TAX</p>
+            <h2>$0.00</h2>
+        </div>
+        <div class="item2 item23"></div>
+        <div class="item2 item24"></div>
+        <div class="item2 item25">4 items</div>
+    </div>
+    </section>
+
+    <section id="products">
+        <div id="first-row">
+            <p>Mon, 4/9/2018 7:57 AM</p>
+            <h3>JKRETAIL</h3>
+        </div>
+
+
+
+        <div id="products-list">
+        <div class="item item26">
+            <img src="customer.png">
+            <p>Customer</p>
+        </div>
+        <div class="item item27">
+            <img src="coupon.png" >
+            <p>Coupon</p>
+        </div>
+        <div class="item item28">
+             <img src="layway.png" >
+            <p>Layaway</p>
+        </div>
+        <div class="item item29">
+             <img src="icons8-book-50.png" >
+            <p>Manage Invoice</p>
+        </div>
+        <div class="item item30">
+             <img src="Manager.png" >
+            <p>Manager</p>
+        </div>
+        <div class="item item31">
+             <img src="Exit Main.png" >
+            <p>Exit Main</p>
+        </div>
+        <div class="item item32">
+             <img src="arrow-up.png" >
+            
+        </div>
+        <div class="item item33">
+             <img src="No-tax.png" >
+            <p>Exempt Tax Invoice</p>
+        </div>
+        <div class="item item34">
+             <img src="box-out.png" >
+            <p>List out</p>
+        </div>
+        <div class="item item35">
+             <img src="reopen-holds.png" >
+            <p>Reopen Holds</p>
+        </div>
+        <div class="item item36">
+             <img src="Hold.png" >
+            <p>Hold</p>
+        </div>
+        <div class="item item37">
+             <img src="Cancel Trans.png" >
+            <p>Cancel Trans</p>
+        </div>
+        <div class="item item38">
+             <img src="arrow-down.png" >
+            
+        </div>
+        <div class="item item39">
+            <img src="bottle.png" >
+        </div>
+        
+        <div class="item item41">
+             <img src="payout.png" >
+            <p>Payout</p>
+        </div>
+        <div class="item item42">
+             <img src="Item Lookup.png" >
+            <p>Item Lookup</p>
+        </div>
+        <div class="item item43">
+             <img src="No sale.png" >
+            <p>No Sale</p>
+        </div>
+        <div class="item item44">
+             <img src="item-discount.png" >
+            <p>Item Discount</p>
+        </div>
+       
+        <div class="item item47">
+             <img src="start WIC.png" >
+            <p>Start WIC</p>
+        </div>
+        <div class="item item48">
+             <img src="Tare.png" >
+            <p>Tare</p>
+        </div>
+        <div class="item item49">
+             <img src="12pack.png" >
+            <p>Pack</p>
+        </div>
+        <div class="item item50">
+            <p>C</p>
+        </div>
+        <div class="item item51">
+            <p>0</p>
+        </div>
+       
+        <div class="item item54">
+             <img src="icons8-backspace-60.png" >
+            
+        </div>
+        <div class="item item55">
+             <img src="6pack.png" >
+            <p>Pack</p>
+        </div>
+        <div class="item item56">
+            <p>@/For</p>
+        </div>
+        <div class="item item57">
+             <p>7</p>
+        </div>
+        <div class="item item58">
+            <p>8</p>
+        </div>
+        <div class="item item59">
+            <p>9</p>
+        </div>
+        <div class="item item60">
+             <img src="Discount.png" >
+            <p>Discount</p>
+        </div>
+        <div class="item item61">
+             <img src="Refund Item.png" >
+            <p>Refund Item</p>
+        </div>
+        <div class="item item62">
+             <img src="Qty+.png" >
+            <p>Qty +</p>
+        </div>
+        <div class="item item63">
+            <p>4</p>
+        </div>
+        <div class="item item64">
+            <p>5</p>
+        </div>
+        <div class="item item65">
+            <p>6</p>
+        </div>
+        <div class="item item66">
+             <img src="Enter.png" >
+             <p>Enter</p>
+            <p></p>
+        </div>
+        <div class="item item67">
+            <img src="Total.png" >
+            <p>Total</p>
+        </div>
+        <div class="item item68">
+            <img src="Preset items.png" >
+            <p>Preset Itemms</p>
+        </div>
+        <div class="item item69">
+            <img src="Department sale.png" >
+            <p>Department Sale</p>
+        </div>
+        <div class="item item70">
+            <img src="Qty-.png" >
+            <p>Qty -</p>
+        </div>
+        <div class="item item71">
+            <p>1</p>
+        </div>
+         <div class="item item72">
+            <p>2</p>
+         </div>
+        <div class="item item73">
+            <p>3</p>
+        </div>
+        <div class="item item74">
+            <img src="void-item.png">
+            <p>Void Item</p>
+        </div>
+        <div class="item item75">
+            <p>0</p>
+        </div>
+        <div class="item item76">
+            <p>00</p>
+        </div>
+        <div class="item item77">
+            <p>.</p>
+        </div>
+        
+        
+        </div>
+    </section>
+
+
+
+</body>
+</html>
